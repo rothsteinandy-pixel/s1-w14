@@ -13,6 +13,10 @@ public class SimMontyMain {
          SimMonty m = new SimMonty();
          int countRuns = 0;
          myWinTotal = 0;
+         while (countRuns <=numGames){
+            sim
+
+         }
          //you write this...
         //  while(){
              

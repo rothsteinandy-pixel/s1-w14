@@ -2,7 +2,7 @@ public class SimMontyMain {
     //you can embed the main method any where you want!
     public static void main(String[] args){
         SimMontyMain m = new SimMontyMain();
-        m.runSimulation(100000); 
+        m.runSimulation(1000000); 
     }
 
     private int myWinTotal;
@@ -10,11 +10,13 @@ public class SimMontyMain {
 
     //implement this method
     public void runSimulation (int numGames) {
-         SimMonty m = new SimMonty();
+        for(int i = 0; i<3; i++){
+         SimMonty m = new SimMonty(i);
          int countRuns = 0;
          myWinTotal = 0;
          while (countRuns <=numGames){
-            sim
+            myWinTotal += m.playGame();
+            countRuns++;
 
          }
          //you write this...
@@ -22,7 +24,8 @@ public class SimMontyMain {
              
         //  }
          //stop here...
-         System.out.println((myWinTotal * 1.0)/numGames);
+         System.out.println("Type: "+i+" - Win%: "+(myWinTotal * 1.0)/numGames);
+        }
     }
     
     

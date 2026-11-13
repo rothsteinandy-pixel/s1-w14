@@ -7,10 +7,10 @@ public class SimMonty {
     private SimContestant player;
    
     
-    public SimMonty ( ) {
+    public SimMonty (int ct) {
         Calendar c = Calendar.getInstance ( );
         randoms = new Random (c.getTimeInMillis ( ));
-        player = new SimContestant (randoms);
+        player = new SimContestant (randoms, ct);
     }
     
     // Play the game, returning 1 if the contestant wins and 0 if not.
